@@ -1,0 +1,122 @@
+{
+  "versao": "2026-11-17.1",
+
+  "marca": {
+    "nome": "Suporte de TI",
+    "logo": "https://barralmj.sharepoint.com/:i:/s/bmjconnections/IQBwdA7nAQ2NTp0WMJ0DMdYeAaGXrEubGqTPqojWG9QeHpw?e=pF81f0"
+  },
+
+  "cadencia": {
+    "diasDaSemana": [1, 2, 3, 4, 5],
+    "horaInicio": 9,
+    "horaFim": 17,
+    "intervaloMinimoHoras": 20,
+    "maxPorSemana": 2
+  },
+
+  "rastrearCliques": true,
+
+  "telemetria": {
+    "webhookUrl": ""
+  },
+
+  "avisos": [
+    {
+      "id": "antiphishing-2026-11",
+      "titulo": "Campanha Antiphishing",
+      "linhas": [
+        "Pare. Verifique. Proteja.",
+        "Nunca informe sua senha por e-mail ou Teams."
+      ],
+      "botao": {
+        "texto": "Abrir cartilha",
+        "url": "https://barralmj.sharepoint.com/sites/CanalTi/SitePages/antiphishing.aspx"
+      },
+      "textoFechar": "Entendi",
+      "cenario": "Reminder",
+      "prioridade": 20,
+      "peso": 1,
+      "inicio": "2026-11-17",
+      "fim": "2026-12-19",
+      "repeticoesMax": 4,
+      "cooldownDias": 7
+    },
+    {
+      "id": "mfa-aprovacao-inesperada",
+      "titulo": "Recebeu um pedido de aprovação que você não iniciou?",
+      "linhas": [
+        "Negue e avise a TI imediatamente.",
+        "Aprovar por reflexo é como alguém entra na sua conta."
+      ],
+      "botao": {
+        "texto": "Como reportar",
+        "url": "https://barralmj.sharepoint.com/sites/CanalTi/SitePages/antiphishing.aspx"
+      },
+      "cenario": "Reminder",
+      "prioridade": 20,
+      "peso": 1,
+      "inicio": "2026-11-17",
+      "fim": "2027-03-31",
+      "repeticoesMax": 6,
+      "cooldownDias": 14
+    },
+    {
+      "id": "bloqueio-de-tela",
+      "titulo": "Saindo da mesa?",
+      "linhas": [
+        "Windows + L bloqueia a sua sessão em um segundo.",
+        "Estação desbloqueada é acesso livre aos seus dados."
+      ],
+      "cenario": "Default",
+      "prioridade": 10,
+      "peso": 2,
+      "repeticoesMax": 0,
+      "cooldownDias": 21
+    },
+    {
+      "id": "arquivos-no-onedrive",
+      "titulo": "Seus arquivos estão protegidos?",
+      "linhas": [
+        "O que está só na área de trabalho não tem backup.",
+        "Trabalhe dentro do OneDrive ou do SharePoint."
+      ],
+      "botao": {
+        "texto": "Ver orientação",
+        "url": "https://barralmj.sharepoint.com/sites/CanalTi"
+      },
+      "cenario": "Default",
+      "prioridade": 10,
+      "peso": 1,
+      "repeticoesMax": 0,
+      "cooldownDias": 30
+    },
+    {
+      "id": "reinicio-mensal",
+      "titulo": "Reinicie o computador hoje",
+      "linhas": [
+        "As atualizações de segurança só se aplicam após reiniciar.",
+        "Leva poucos minutos e evita a atualização forçada."
+      ],
+      "cenario": "Reminder",
+      "prioridade": 15,
+      "peso": 1,
+      "repeticoesMax": 2,
+      "cooldownDias": 7,
+      "publico": {
+        "excluirMaquina": ["^SRV-", "^VM-LAB"]
+      }
+    },
+    {
+      "id": "exemplo-pausado",
+      "titulo": "Modelo para copiar",
+      "linhas": [
+        "Este aviso nunca aparece porque está pausado.",
+        "Copie o bloco, troque o id e tire o pausado."
+      ],
+      "pausado": true,
+      "prioridade": 0,
+      "repeticoesMax": 1,
+      "cooldownDias": 365
+    }
+  ]
+}
